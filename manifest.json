@@ -5,7 +5,7 @@
     "src": "favicons/google-touch-icon.png",
     "sizes": "512x512"
   }],
-  "theme_color": "#202024",
+  "theme_color": "#5051DB",
   "background_color": "#202024",
   "display": "standalone"
 }
