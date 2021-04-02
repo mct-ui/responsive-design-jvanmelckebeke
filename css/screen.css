@@ -497,6 +497,72 @@ a:focus {
 }
 
 /*
+    Component: footer
+    ---
+    Main footer of the website
+*/
+
+.c-footer {
+    flex-basis: 100%;
+}
+
+.c-footer__logo {
+    height: 100%;
+}
+
+.c-footer__nav {
+    flex-basis: calc(100% / 2);
+}
+
+@media (min-width: 768px) {
+    .c-footer {
+        flex-basis: 100%;
+    }
+
+    .c-footer__logo {
+        justify-content: space-around;
+        flex-basis: 100%;
+        display: flex;
+    }
+
+    /*there should be a cleaner solution*/
+    .c-footer__nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .c-footer__nav + .c-footer__nav {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .c-footer {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .c-footer__logo {
+        position: absolute;
+        z-index: -1;
+        margin: 0 auto;
+    }
+
+    /*there should be a cleaner solution*/
+    .c-footer__nav {
+        justify-content: flex-start;
+    }
+
+    .c-footer__nav + .c-footer__nav {
+        justify-content: flex-end;
+    }
+}
+
+
+/*
     Component: Lead
     ---
     Lead type treatments to style everything that differs from standard typography elements
@@ -632,6 +698,39 @@ a:focus {
 
 .c-link-cta--inverse:hover::before {
     background-color: white;
+}
+
+/*
+    Component: Title icon
+    ---
+    Special type of title with icon
+*/
+
+.c-title-icon {
+    display: block;
+}
+
+.c-title-icon__icon {
+    height: 50px;
+    width: 50px;
+}
+
+@media (min-width: 768px) {
+    .c-title-icon__icon {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .c-title-icon {
+        display: flex;
+        flex-basis: 100%;
+    }
+
+    .c-title-icon__icon {
+        margin-right: 16px;
+    }
 }
 
 
